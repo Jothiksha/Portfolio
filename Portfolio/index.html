@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jothiksha E - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    nav {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      position: relative;
+      padding-bottom: 4px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff7f50;
+      text-decoration: none;
+      padding-bottom: 10px;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #ff7f50;
+      bottom: 0;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease-out;
+    }
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    section {
+      padding: 3rem 0;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #333;
+      font-size: 2rem;
+    }
+
+    #home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 30px;
+    }
+    #home img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+    #home img:hover {
+      transform: scale(1.05);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 1.5rem 0;
+      color: #333;
+    }
+
+    .achievements ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .achievements li {
+      background: #ddd;
+      padding: 1rem 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .achievements li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      background-color: #ff7f50;
+      color: white;
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .skills li {
+      background: #ddd;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .skills li:hover {
+      transform: translateY(-5px);
+      background-color: #ff7f50;
+      color: white;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .projects .project {
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      max-width: 400px;
+      flex: 1 1 300px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .projects .project:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .contact a {
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact a:hover {
+      color: #ff7f50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background: #333;
+      color: #fff;
+      margin-top: 2rem;
+      transition: background 0.3s ease;
+    }
+    footer:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="container">
+    <div>
+      <h2>Welcome to My Portfolio</h2>
+      <p>Hi, I'm Jothiksha E, a passionate Software Systems student with a focus on Web Development, Python programming, and graphical design. 
+        I am driven by the idea of creating innovative solutions through technology and design. 
+        My journey in the tech world has been one of continuous learning, and 
+        I am always excited to work on projects that challenge me to think outside the box.
+      </p>
+      <p>In this portfolio, you'll find an overview of my skills, achievements, and the projects I’ve worked on during my academic journey. 
+        I believe in crafting experiences that are both functional and aesthetically pleasing, and 
+        I’m always looking to collaborate on meaningful projects that push boundaries.</p>
+  </div>
+    </div>
+    <img src="./assets/images/image.jpeg" alt="Jothiksha E - Portfolio">
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>I'm Jothiksha E, a final-year PG student majoring in Software Systems at KG College of Arts and Science, with an 8 CGPA. 
+      Throughout my academic journey, I have cultivated a passion for programming, web development, and graphic design.
+      My work is guided by a deep sense of attention to detail and a commitment to delivering high-quality results.
+      I am an adaptable and proactive individual who thrives in team-oriented environments. 
+      Whether it's a project requiring problem-solving skills or designing intuitive user interfaces, 
+      I enjoy taking on new challenges and learning from them. 
+      My strong organizational abilities help me stay on track and meet deadlines effectively, 
+      ensuring that my work is always on time and up to the mark.
+      In addition to my technical skills, I believe in continuous personal development, 
+      which is why I often take the time to learn new skills and improve existing ones. 
+      I have experience in Java, Python, SQL, web development, 3D modeling, UI/UX design, and graphic design.
+      Alongside studies, I run a side hustle in graphic design and video editing.</p>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="container">
+    <h2 class="section-title">Achievements</h2>
+    <div class="achievements">
+      <ul>
+        <li>Secured 3rd position in National Level Smart India Hackathon - 2022</li>
+        <li>Published "Food Share Network" research paper in IJRASET - 2023</li>
+        <li>Secured 3rd position in District-Level Hockey Tournament - 2019</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <ul>
+        <li>Web Development</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>SQL</li>
+        <li>UI/UX Designing</li>
+        <li>Graphic Designing</li>
+        <li>3D Modeling</li>
+        <li>Selenium</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Food Share Network</h3>
+        <p>A food donation app that connects donors with charities and food banks in real-time to reduce waste.</p>
+        <p><b>Technologies:</b> HTML, CSS, JavaScript, Django, MySQL</p>
+      </div>
+      <div class="project">
+        <h3>Borewell Rescue System</h3>
+        <p>An IoT and robotic system designed for safe rescue of children trapped in borewells.</p>
+        <p><b>Mechanism:</b> Umbrella type.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact">
+      <p>Email: <a href="mailto:jothikshaelango@gmail.com">jothikshaelango@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/jothiksha" target="_blank">linkedin.com/in/jothiksha</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Jothiksha E. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
